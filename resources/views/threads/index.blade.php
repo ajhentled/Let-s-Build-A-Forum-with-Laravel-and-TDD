@@ -16,9 +16,8 @@
                             </h4>
                             <div class="body">{{ $thread->body }}</div>
                         </article>
-
                         <hr>
-                    @endforeach;
+                    @endforeach
                 </div>
             </div>
         </div>
