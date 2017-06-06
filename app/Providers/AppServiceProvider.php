@@ -16,10 +16,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
-        /*\View::composer('threads.create', function ($view) {
+        \View::composer('*', function ($view) {
             $view->with('channels', \App\Channel::all());
-        });*/
-        \View::share('channels', \App\Channel::all());
+        });
+        // \View::share('channels', \App\Channel::all());
     }
 
     /**
