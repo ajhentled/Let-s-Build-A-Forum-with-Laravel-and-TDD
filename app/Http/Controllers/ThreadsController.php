@@ -17,7 +17,6 @@ class ThreadsController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
 
-
     /**
      * Display a listing of the resource.
      *
@@ -99,8 +98,6 @@ class ThreadsController extends Controller
         if ($channel->exists) {
             $threads->where('channel_id', $channel->id);
         }
-
-        // dd($threads->toSql());
 
         return $threads->get();
     }

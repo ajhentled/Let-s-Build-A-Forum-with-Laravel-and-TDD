@@ -15,7 +15,11 @@ class Thread extends Model
      */
     protected $guarded = [];
 
+    protected $with = ['creator', 'channel'];
 
+    /**
+     * Boot the model.
+     */
     protected static function boot()
     {
         parent::boot();
@@ -23,7 +27,7 @@ class Thread extends Model
         static::addGlobalScope('replyCount', function ($builder) {
             $builder->withCount('replies');
         });
-    }
+   }
 
     /**
      * Get a string path for the thread.
